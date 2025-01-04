@@ -14,7 +14,7 @@ from tqdm.auto import tqdm
 from timeit import default_timer as timer
 
 from torch.utils.data import DataLoader
-
+from pathlib import Path
 # Define the custom transformation
 transform = transforms.Compose([
     transforms.Grayscale(num_output_channels=1),  # Convert image to grayscale
@@ -62,8 +62,6 @@ def acc_fn(y_true, y_pred):
     acc = (correct / len(y_pred)) * 100
     return acc
 
-
-from tqdm.auto import tqdm
 
 torch.manual_seed(42)
 def train_model(epochs:int, model:torch.nn.Module):
@@ -175,11 +173,6 @@ model_1 = FashionMNISTModelV1(input_shape=1, #1 color channel
                               hidden_units=64,
                               output_shape=len(class_list)).to(device)
 print(model_1)
-
-
-
-
-from pathlib import Path
 
 MODEL_PATH= Path("Models")
 MODEL_PATH.mkdir(parents=True, exist_ok=True)
