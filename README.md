@@ -2,6 +2,8 @@
 
 This project is a Streamlit-based web application that allows users to upload images and classify them into one of the categories from the Fashion MNIST dataset. It uses a Convolutional Neural Network (CNN) model trained on the Fashion MNIST dataset to predict the class of clothing images such as T-shirts, trousers, dresses, and more.
 
+Training File: [Colab Notebook](https://colab.research.google.com/drive/1OQa4XORL-UcdqJayeC4AvQDpbG7FyXfg?usp=sharing)
+
 ## Features:
 - **Image Upload**: Users can upload their own clothing images to be classified.
 - **Sample Images**: A set of sample images from the Fashion MNIST dataset is available for users to try. These images can be downloaded for offline testing.
